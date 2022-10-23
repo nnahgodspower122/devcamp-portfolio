@@ -7284,3 +7284,3025 @@ Completed 200 OK in 306ms (Views: 84.4ms | ActiveRecord: 75.6ms)
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "portfolios"."id" FROM "portfolios"[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "blogs"."id" FROM "blogs"[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "blogs"."id" FROM "blogs"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (16.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20221002191230)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (555.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "name" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20221002191230_devise_create_users.rb:5
+  [1m[35m (54.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20221002191230_devise_create_users.rb:42
+  [1m[35m (63.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20221002191230_devise_create_users.rb:43
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221002191230"]]
+  ↳ bin/rails:9
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (31.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/user/sign_up" for ::1 at 2022-10-02 15:14:41 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/user/sign_up"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2022-10-02 15:14:50 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (2.6ms)
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (187.1ms)
+Completed 200 OK in 602ms (Views: 548.7ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/users" for ::1 at 2022-10-02 15:15:15 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ypL/azrCTgwMaTmM/16co+QVP2U0YQCgfiVd1ust2VIWPG4ZqFlbWBPGpaSmq3gUc3UdcL4W3ujvltP1GlDFmw==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "nnahgodspower124@gmail.com"], ["encrypted_password", "$2a$12$TEkpjgk8UIOn2ddqcrKc4eSH07Mg73rygS7JNiwlaEZnsNXooKzDe"], ["created_at", "2022-10-02 19:15:15.838020"], ["updated_at", "2022-10-02 19:15:15.838020"]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (10.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 458ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 15:15:15 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 135ms (Views: 90.8ms | ActiveRecord: 22.7ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2022-10-02 15:50:30 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 59ms (Views: 55.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-10-02 15:51:21 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 15:51:21 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:08:58 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (62.7ms)
+Completed 200 OK in 576ms (Views: 537.7ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/register" for ::1 at 2022-10-02 16:09:12 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 26ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:09:12 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 63ms (Views: 60.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:09:25 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (5.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 62ms (Views: 54.1ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/login" for ::1 at 2022-10-02 16:09:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/login" for ::1 at 2022-10-02 16:09:33 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:09:33 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/logout" for ::1 at 2022-10-02 16:09:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-10-02 16:24:13 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 86ms (Views: 80.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/register" for ::1 at 2022-10-02 16:24:18 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:24:18 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 60ms (Views: 57.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:24:24 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:57:33 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 81ms (Views: 76.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:57:35 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:57:36 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 69ms (Views: 65.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:57:37 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 89ms (Views: 84.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/register" for ::1 at 2022-10-02 16:57:53 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:57:53 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 70ms (Views: 66.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/login" for ::1 at 2022-10-02 16:58:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:58:01 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (3.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (10.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 66ms (Views: 60.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:58:54 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:58:55 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:58:56 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 56ms (Views: 52.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:58:56 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 63ms (Views: 58.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:58:57 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 84ms (Views: 79.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:59:08 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+Completed 200 OK in 65ms (Views: 61.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:59:30 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 70ms (Views: 66.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:59:51 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2022-10-02 16:59:52 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1OlwaVOHP+LVFcf9Hf4KeVI+pHaJ7eBUJqQc1MF4YosIR+EbwRwqtsq6W9VEC+7OxV6GYwOaPhy3F5L3MAV+Qg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 17ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:59:52 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/register" for ::1 at 2022-10-02 16:59:56 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2022-10-02 16:59:59 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 122ms (Views: 119.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2022-10-02 17:00:05 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"93rsmDnmyuk6yb3SvQNwyYoPZq8TYkdwZjvCpUs/5LgKaJpOouFd+3fYt1uZ+y32WDkSwp6Z/okEygnmKWHzMg==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 423ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:00:05 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 62ms (Views: 58.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-05 16:58:27 -0400
+  [1m[35m (62.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined method `before_filter' for ApplicationController:Class
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-10-05 18:49:00 -0400
+  
+ActionController::RoutingError (undefined method `before_filter' for ApplicationController:Class
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-10-05 18:51:17 -0400
+  
+ActionController::RoutingError (undefined method `before_filter' for ApplicationController:Class
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-10-05 18:51:30 -0400
+  
+ActionController::RoutingError (undefined method `before_filter' for ApplicationController:Class
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-10-05 18:51:31 -0400
+  
+ActionController::RoutingError (undefined method `before_filter' for ApplicationController:Class
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-10-05 18:52:15 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (49.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (34.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (269.2ms)
+Completed 200 OK in 903ms (Views: 566.8ms | ActiveRecord: 154.8ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-10-05 18:52:20 -0400
+Processing by Devise::RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `configure_parameters' for #<Devise::RegistrationsController:0x00007f24340df520>
+Did you mean?  configure_permitted_parameters):
+  
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.8.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/register" for 127.0.0.1 at 2022-10-05 18:52:48 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.4ms)
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (128.0ms)
+Completed 200 OK in 255ms (Views: 184.9ms | ActiveRecord: 10.4ms)
+
+
+Started POST "/" for 127.0.0.1 at 2022-10-05 18:54:05 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+rlNwJLmo/AQ2jCu96Iz/Kn1BiBPG0gjBIX8amw0yaeO2fylo+UvF9iRmQRCQ1ZoJ+38gI/IFEy5NKi6EIncA==", "user"=>{"email"=>"nnahgodspower125@gmail.com", "name"=>"godspower", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (47.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nnahgodspower125@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (37.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "nnahgodspower125@gmail.com"], ["encrypted_password", "$2a$12$PGnxjMtw0GvfGoXtm4mtueOrFK8/nsxc5x2Q53.pZcIih0HHZAgX2"], ["name", "godspower"], ["created_at", "2022-10-05 22:54:06.553361"], ["updated_at", "2022-10-05 22:54:06.553361"]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (16.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 644ms (ActiveRecord: 102.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-05 18:54:06 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (3.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (54.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 155ms (Views: 128.1ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2022-10-05 18:54:24 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.9ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (34.5ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `emainamel' for #<User:0x00007f2431224a50>
+Did you mean?  email_change):
+    10: 
+    11:   <div class="field">
+    12:     <%= f.label :name %><br />
+    13:     <%= f.text_field :emainamel %>
+    14:   </div>
+    15: 
+    16:   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+  
+app/views/devise/registrations/edit.html.erb:13:in `block in _app_views_devise_registrations_edit_html_erb___652547774351867237_69896710068060'
+app/views/devise/registrations/edit.html.erb:3:in `_app_views_devise_registrations_edit_html_erb___652547774351867237_69896710068060'
+Started GET "/edit" for 127.0.0.1 at 2022-10-05 18:54:53 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.4ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 78ms (Views: 72.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2022-10-06 13:36:43 -0400
+  [1m[35m (62.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (49.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (35.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (273.8ms)
+Completed 200 OK in 1074ms (Views: 736.6ms | ActiveRecord: 133.4ms)
+
+
+Started GET "/login" for ::1 at 2022-10-06 13:36:52 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (191.7ms)
+Completed 200 OK in 292ms (Views: 258.2ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/login" for ::1 at 2022-10-06 13:36:54 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MOdFjuKdsVARD/DDKPKIw63cpwIUzPlPzbwqKJlyGwp4H8GuzCBJ9Ceh+xg3+VQbnOmvPqeH3pR5q71PKAJXaw==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (81.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 688ms (ActiveRecord: 81.1ms)
+
+
+Started GET "/" for ::1 at 2022-10-06 13:36:55 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (4.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (2.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 84ms (Views: 73.9ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/edit" for ::1 at 2022-10-06 13:37:02 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (2.1ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 82ms (Views: 76.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2022-10-06 15:03:42 -0400
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::DeviseWhitelist):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-10-06 15:47:30 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/concerns/devise_whitelist.rb:2:in `<module:DeviseWhitelist>'
+app/controllers/concerns/devise_whitelist.rb:1:in `<main>'
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-10-06 15:48:52 -0400
+  
+ActionController::RoutingError (undefined method `before_filter' for ApplicationController:Class
+Did you mean?  before_action):
+  
+app/controllers/concerns/devise_whitelist.rb:5:in `block in <module:DeviseWhitelist>'
+app/controllers/application_controller.rb:3:in `include'
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-10-06 15:49:41 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (2.9ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (61.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 624ms (Views: 568.6ms | ActiveRecord: 25.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2022-10-06 15:50:46 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3dyFKrj6HlNmt2qPV0Ls5lMbv4xFPwzm5kO+CElpBtOw6NWyeDph23V8oQoYObjQet809Z42Wi000hXRxTHziw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `configure_permitted_parameters' for #<Devise::SessionsController:0x00007f859c0eae38>
+Did you mean?  configure_permitted):
+  
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.8.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/logout" for ::1 at 2022-10-06 15:51:25 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3dyFKrj6HlNmt2qPV0Ls5lMbv4xFPwzm5kO+CElpBtOw6NWyeDph23V8oQoYObjQet809Z42Wi000hXRxTHziw=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 7.8ms)
+
+
+  
+NoMethodError (undefined method `configure_parameters' for #<Devise::SessionsController:0x00005623ae7d0d70>
+Did you mean?  configure_permitted):
+  
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.8.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/logout" for ::1 at 2022-10-06 15:51:46 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3dyFKrj6HlNmt2qPV0Ls5lMbv4xFPwzm5kO+CElpBtOw6NWyeDph23V8oQoYObjQet809Z42Wi000hXRxTHziw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 10.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/concerns/devise_whitelist.rb:8:in `configure_permitted'
+Started DELETE "/logout" for ::1 at 2022-10-06 15:52:07 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3dyFKrj6HlNmt2qPV0Ls5lMbv4xFPwzm5kO+CElpBtOw6NWyeDph23V8oQoYObjQet809Z42Wi000hXRxTHziw=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 78ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/" for ::1 at 2022-10-06 15:52:08 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (56.3ms)
+Completed 200 OK in 126ms (Views: 99.3ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/login" for ::1 at 2022-10-06 15:52:12 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2022-10-06 15:52:15 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B35l4cFlGhZ43fhd2iKJuodwy64OGJCDHQsG5poDVznBQQy0QT2c8jjAsEPeyDh6SrP+dccpmcePpaqEgZ+VFA==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 419ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2022-10-06 15:52:15 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 63ms (Views: 59.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/edit" for ::1 at 2022-10-06 15:52:19 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.2ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2022-10-09 17:54:01 -0400
+  [1m[35m (63.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (49.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (34.9ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (259.9ms)
+Completed 200 OK in 1041ms (Views: 768.0ms | ActiveRecord: 133.1ms)
+
+
+Started GET "/login" for ::1 at 2022-10-09 17:54:11 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (199.5ms)
+Completed 200 OK in 312ms (Views: 271.2ms | ActiveRecord: 11.5ms)
+
+
+Started POST "/login" for ::1 at 2022-10-09 17:54:14 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5DOLuod741E68VX0l47Khn2z6NJXIuHsv/rlZBm4UFW7Sqnb2NTDxoP+1fGv6JzuGeyhLEcAYiDtWrZw37zNfw==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (146.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 888ms (ActiveRecord: 147.2ms)
+
+
+Started GET "/" for ::1 at 2022-10-09 17:54:15 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 69ms (Views: 64.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/edit" for ::1 at 2022-10-09 17:54:21 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 158ms (Views: 152.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2022-10-15 16:46:22 -0400
+  [1m[35m (62.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (50.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (34.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (271.1ms)
+Completed 200 OK in 1030ms (Views: 746.9ms | ActiveRecord: 144.1ms)
+
+
+Started GET "/login" for ::1 at 2022-10-15 16:46:27 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (190.8ms)
+Completed 200 OK in 291ms (Views: 251.6ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/login" for ::1 at 2022-10-15 16:46:29 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VD7CQirbtm2ctppDohU+OfkavMfsrIlMTrWhzulpCnUneN6Lf3vrbYMwWleG/b8nPNVXD8P9Nd0vvWGp4X7VpQ==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (125.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 877ms (ActiveRecord: 125.2ms)
+
+
+Started GET "/" for ::1 at 2022-10-15 16:46:30 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 71ms (Views: 68.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/edit" for ::1 at 2022-10-15 16:46:33 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (2.1ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 86ms (Views: 82.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/register" for ::1 at 2022-10-15 16:46:49 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2022-10-15 16:46:49 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 119ms (Views: 114.6ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/logout" for ::1 at 2022-10-15 16:46:52 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LDeMZ41EQSl2K0y8Fx6+ymp1eiKG3HCPQFVQL7qtJHtfZi3/AoSkmuozbx20/vqzgmi/rNujPi3eZI/EBVATfw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 57ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2022-10-15 16:46:52 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 56ms (Views: 52.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/register" for ::1 at 2022-10-15 16:46:55 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.7ms)
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 89ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2022-10-15 17:30:40 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 88ms (Views: 52.9ms | ActiveRecord: 12.5ms)
+
+
+Started POST "/login" for ::1 at 2022-10-15 17:30:42 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zrCK+MJ62V132ECcAd1W5kXz7JLtx274xT/vXnnf+A7qnDsdVx1GVEhsFyPgdiYGnqer1maAKqkX4JbXbST8oQ==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 394ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2022-10-15 17:30:42 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (51.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 146ms (Views: 123.9ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/edit" for ::1 at 2022-10-15 17:30:46 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 62ms (Views: 58.1ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/" for ::1 at 2022-10-15 17:31:00 -0400
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZLZArMi5fkBx802a4sF7c7op04LBBSQNjmcoL6FVWUWMtzM8nhq5TAdh3KYTYoFQeOdxzrVBaF/8et2uGA/yeQ==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "name"=>"nnah godspower", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["name", "nnah godspower"], ["updated_at", "2022-10-15 21:31:01.114603"], ["id", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (204.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 649ms (ActiveRecord: 206.8ms)
+
+
+Started GET "/" for ::1 at 2022-10-15 17:31:01 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (36.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2022-10-15 18:06:03 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (79.3ms)
+Completed 200 OK in 136ms (Views: 101.0ms | ActiveRecord: 26.7ms)
+
+
+Started GET "/edit" for ::1 at 2022-10-15 18:06:14 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.2ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/" for ::1 at 2022-10-15 18:06:27 -0400
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2kLUF9t7B2kwlO393d7xYlhPRyMnZ1WLLQexu8XWcWAyQ6eHjdjAZUYGfMEsfQtBmoHlb1MjGdlfGkQ6fIzaXA==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "name"=>"sunday godspower", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["name", "sunday godspower"], ["updated_at", "2022-10-15 22:06:27.903224"], ["id", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (16.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 465ms (ActiveRecord: 18.2ms)
+
+
+Started GET "/" for ::1 at 2022-10-15 18:06:27 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/edit" for ::1 at 2022-10-15 18:06:37 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/" for ::1 at 2022-10-15 18:06:51 -0400
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"puCDwaXGba0AlMKrTV+VkC+8MaiWcu3sL9x6BWK+bPJO4fBR82WqoXYGU5e8/G+z7XKT5OI2ob5dwY+E2+THzg==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "name"=>"nnah godspower", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["name", "nnah godspower"], ["updated_at", "2022-10-15 22:06:51.506198"], ["id", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (19.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 431ms (ActiveRecord: 22.4ms)
+
+
+Started GET "/" for ::1 at 2022-10-15 18:06:51 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 55ms (Views: 51.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2022-10-16 11:54:53 -0400
+  [1m[35m (62.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (50.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (35.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (279.3ms)
+Completed 200 OK in 937ms (Views: 666.7ms | ActiveRecord: 144.9ms)
+
+
+Started GET "/login" for ::1 at 2022-10-16 11:55:00 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (190.9ms)
+Completed 200 OK in 280ms (Views: 244.2ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/login" for ::1 at 2022-10-16 11:55:03 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FcCUg2ElMsll63bxOPU7DtrplsSXIJmC7C6k279nkc0wUefFv+Jx7GOlYyjJ/tiJbNluuEa/F5THPG6jMpejfQ==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (48.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 734ms (ActiveRecord: 48.0ms)
+
+
+Started GET "/" for ::1 at 2022-10-16 11:55:04 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/portfolios" for ::1 at 2022-10-16 11:55:32 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (38.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (64.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 294ms (Views: 117.1ms | ActiveRecord: 46.5ms)
+
+
+Started GET "/portfolios/15/edit" for ::1 at 2022-10-16 11:55:37 -0400
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:24
+  Rendering portfolios/edit.html.erb within layouts/application
+  Rendered portfolios/edit.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Edit your portfilio item</h1>
+    2: 
+    3: <%= form_for(@portfolio_item) do |f| %>
+    4:     <div class="field">
+    5:         <%= f.label :title %>
+    6:         <%= f.text_field :title %>
+  
+app/views/portfolios/edit.html.erb:3:in `_app_views_portfolios_edit_html_erb__1670185849684567190_70286905629580'
+Started GET "/portfolios" for ::1 at 2022-10-16 11:55:47 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 69ms (Views: 64.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/portfolios/16/edit" for ::1 at 2022-10-16 11:55:51 -0400
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:24
+  Rendering portfolios/edit.html.erb within layouts/application
+  Rendered portfolios/edit.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Edit your portfilio item</h1>
+    2: 
+    3: <%= form_for(@portfolio_item) do |f| %>
+    4:     <div class="field">
+    5:         <%= f.label :title %>
+    6:         <%= f.text_field :title %>
+  
+app/views/portfolios/edit.html.erb:3:in `_app_views_portfolios_edit_html_erb__1670185849684567190_70286805286780'
+Started GET "/portfolios" for ::1 at 2022-10-16 11:55:53 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/portfolios/new" for ::1 at 2022-10-16 11:55:57 -0400
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (16.9ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 272ms (Views: 66.5ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/portfolios" for ::1 at 2022-10-16 12:12:00 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (28.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 148ms (Views: 120.3ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/portfolios/4" for ::1 at 2022-10-16 12:12:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/portfolios/4"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/portfolios/4?q=twitter" for ::1 at 2022-10-16 12:14:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/portfolios/4"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (39.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "portfolios"[0m
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/portfolios/19" for ::1 at 2022-10-16 12:15:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/portfolios/19"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/portfolios/18" for ::1 at 2022-10-16 12:15:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/portfolios/18"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/portfolio/16" for ::1 at 2022-10-16 12:15:49 -0400
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:39
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (33.9ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 16]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (57.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 121ms (Views: 60.8ms | ActiveRecord: 41.3ms)
+
+
+Started GET "/portfolio/18" for ::1 at 2022-10-16 12:15:55 -0400
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:39
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 18]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 95ms (Views: 89.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/portfolio/18?q=twitter" for ::1 at 2022-10-16 12:17:21 -0400
+Processing by PortfoliosController#show as HTML
+  Parameters: {"q"=>"twitter", "id"=>"18"}
+Completed 500 Internal Server Error in 318ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `sessions' for #<PortfoliosController:0x00007fd9f84cd928>
+Did you mean?  session):
+  
+app/controllers/application_controller.rb:8:in `set_source'
+Started GET "/portfolio/18?q=twitter" for ::1 at 2022-10-16 12:17:42 -0400
+Processing by PortfoliosController#show as HTML
+  Parameters: {"q"=>"twitter", "id"=>"18"}
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:39
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 18]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (24.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 147ms (Views: 84.2ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/portfolio/18?q=twitter" for ::1 at 2022-10-16 12:18:05 -0400
+Processing by PortfoliosController#show as HTML
+  Parameters: {"q"=>"twitter", "id"=>"18"}
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:39
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 18]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 55ms (Views: 48.7ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2022-10-16 12:18:06 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"07M/b/uiJFT0/S9E+sO8QCbfY+ztlHWytratebaqEipo99+FhOhtw59ZCpgnxNRO0wWiGEIQCNCeBIZQaa925Q=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 91ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2022-10-16 12:18:06 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 96ms (Views: 74.1ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/login" for ::1 at 2022-10-16 12:18:12 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2022-10-16 12:18:15 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MOml+rIoXnJIYkxujQviCjiObg0+ZCxOvVdSPAefRIJz+OB7vrJ1PSHEulnoqTFlMPWxK+z1OjVMzGLrcHrVaA==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 408ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2022-10-16 12:18:16 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/portfolios" for ::1 at 2022-10-16 12:18:27 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 79ms (Views: 76.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2022-10-16 12:18:43 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/portfolio/18?q=twitter" for ::1 at 2022-10-16 12:18:48 -0400
+Processing by PortfoliosController#show as HTML
+  Parameters: {"q"=>"twitter", "id"=>"18"}
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:39
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 18]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 52ms (Views: 46.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/portfolio/18?q=twitter" for ::1 at 2022-10-16 12:19:01 -0400
+Processing by PortfoliosController#show as HTML
+  Parameters: {"q"=>"twitter", "id"=>"18"}
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:39
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 18]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 62ms (Views: 56.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/blogs" for ::1 at 2022-10-16 12:19:26 -0400
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 117ms (Views: 46.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/portfolios" for ::1 at 2022-10-16 12:19:37 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 73ms (Views: 69.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/portfolios" for ::1 at 2022-10-16 12:19:51 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 94ms (Views: 90.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2022-10-16 12:19:55 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 69ms (Views: 65.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-22 14:41:00 -0400
+  [1m[35m (61.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (50.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (35.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (287.6ms)
+Completed 200 OK in 1073ms (Views: 776.2ms | ActiveRecord: 148.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-10-22 14:41:06 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (199.9ms)
+Completed 200 OK in 305ms (Views: 259.8ms | ActiveRecord: 11.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-22 14:41:09 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IZpjy7rLsl+BgrDbHNabs6YhlaDUTVQpQKOM/PMhdVgnxB23Ce4mrixYmYh4+uZEXbw0HA7eSJD5MCLgxFF3ew==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (48.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 710ms (ActiveRecord: 48.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-22 14:41:10 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 76ms (Views: 72.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2022-10-22 14:41:14 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.8ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 74ms (Views: 69.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/portfolio" for 127.0.0.1 at 2022-10-22 14:41:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/portfolio"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/portfolios" for 127.0.0.1 at 2022-10-22 14:41:51 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (69.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (95.8ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 239ms (Views: 77.6ms | ActiveRecord: 79.7ms)
+
+
+Started GET "/portfolio/16?q=twitter" for 127.0.0.1 at 2022-10-22 14:42:03 -0400
+Processing by PortfoliosController#show as HTML
+  Parameters: {"q"=>"twitter", "id"=>"16"}
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:39
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (40.1ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 16]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (360.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 469ms (Views: 371.3ms | ActiveRecord: 47.0ms)
+
+
+Started GET "/portfolio" for 127.0.0.1 at 2022-10-22 14:42:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/portfolio"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/portfolios" for 127.0.0.1 at 2022-10-22 14:42:19 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 68ms (Views: 64.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-22 14:42:26 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 69ms (Views: 63.3ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-22 14:42:29 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Dz9616vZu66eElnkNlROq6DEUibR4yzSWqA1dXaOTPhS4q44kZApokbHhhsqlxTsoa8DhLHGECW0+BZB0WAJXQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 56ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-22 14:42:29 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 59ms (Views: 56.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-10-22 14:42:36 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-22 14:42:38 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wo/NiUNFjFwri9cDeQmvhrebwOTgS4acDrocKb8fuMWtEm4J2vtcvMV7IReE3mYlVKzM7BVPIs8wNa+6Dut1Dg==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 395ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-22 14:42:39 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 66ms (Views: 63.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-22 17:54:49 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (86.6ms)
+Completed 200 OK in 179ms (Views: 134.6ms | ActiveRecord: 31.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-22 17:54:55 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-22 17:54:58 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XuK0y/+xS4ehdKhBWSjlRW+2SWbir+FJrCxub4RvxuP9YcMSPehJa9//3LCjA1rdYmYgI20lA1wmClGyo8afTg=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 11ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-22 17:54:58 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-10-22 17:55:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-22 17:55:04 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFR4SV4vmTftdO5zrFydiy9D5FIHGj6wdpfmBkZFbixEhC5mTU3dz2EljIpwjbFJfbnz8ljeEC+XMWJatVrhPA==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 396ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-22 17:55:04 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-10-22 17:55:57 -0400
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 76ms (Views: 60.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2022-10-22 18:13:15 -0400
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (36.4ms)
+  Rendered blogs/new.html.erb within layouts/application (38.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 169ms (Views: 119.5ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/blogs" for 127.0.0.1 at 2022-10-22 18:13:38 -0400
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+kfcyLPa4Me8/sC0VtIONwRHL01OCehkq3SsPtRurPBJn+8jFbs7mz55LIbxMWRJjU5JVN0+QLax1a++ZS58g==", "blog"=>{"title"=>"My Abuja Blog", "body"=>"new abuja blog updates now available"}, "commit"=>"Create Blog"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:27
+  [1m[36mBlog Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-abuja-blog"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:27
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/blogs_controller.rb:27
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (4.2ms)
+  Rendered blogs/new.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 422 Unprocessable Entity in 330ms (Views: 58.0ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/blogs" for 127.0.0.1 at 2022-10-22 18:13:58 -0400
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FOt8Vv8DX8W9Ugxl0/eJCvxZZmMqEPT6+A0/0QZniW/U5S8zP0yuQ0yrXH45zvj7uvWJ+ti2QYf/fDTpa7FG3Q==", "blog"=>{"title"=>"My Abuja Blog", "body"=>"new abuja blog updates now available"}, "commit"=>"Create Blog"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:27
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-abuja-blog"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/blogs_controller.rb:27
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (5.4ms)
+  Rendered blogs/new.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 422 Unprocessable Entity in 76ms (Views: 66.4ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/blogs" for 127.0.0.1 at 2022-10-22 18:14:14 -0400
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pJg1S1Nwhc/fgk6lbxtkFJnW1qsClP2iQMCi0ShbHeRklmYukz90SS57Hr6FIhXl33o5MvAySN9HsanpRY3SVg==", "blog"=>{"title"=>"My Lagos Blog", "body"=>"new abuja blog updates now available"}, "commit"=>"Create Blog"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:27
+  [1m[36mBlog Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-lagos-blog"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:27
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/blogs_controller.rb:27
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (4.3ms)
+  Rendered blogs/new.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 422 Unprocessable Entity in 69ms (Views: 60.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/blogs" for 127.0.0.1 at 2022-10-22 18:14:15 -0400
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TFJ3RtFbM4yrj453ogGWoBQ33+u3ZePjc2p3YoEFQteMXCQjERTCClp23mxIOOdRUpswckXDVp50G3xa7NONZQ==", "blog"=>{"title"=>"My Lagos Blog", "body"=>"new abuja blog updates now available"}, "commit"=>"Create Blog"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:27
+  [1m[36mBlog Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-lagos-blog"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:27
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/blogs_controller.rb:27
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (5.5ms)
+  Rendered blogs/new.html.erb within layouts/application (7.5ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 422 Unprocessable Entity in 76ms (Views: 63.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/blogs/my-lagos-blog" for 127.0.0.1 at 2022-10-22 18:14:24 -0400
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-lagos-blog"}
+  [1m[36mBlog Load (29.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-lagos-blog"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:73
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 111ms (Views: 47.9ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2022-10-22 18:14:28 -0400
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (6.2ms)
+  Rendered blogs/new.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/blogs" for 127.0.0.1 at 2022-10-22 18:17:03 -0400
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nXKfwb3QyPIT1beGJhvG5Y3bO3x1bq/E4DUqyMjXpdKfvf8OE0lPn2HfqDbshEtMd/8e5BMicWeoX67GyhKmkw==", "blog"=>{"title"=>"My Lagos Blog", "body"=>"lllllllllll"}, "commit"=>"Create Blog"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:27
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-lagos-blog"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/blogs_controller.rb:27
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (4.7ms)
+  Rendered blogs/new.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 422 Unprocessable Entity in 66ms (Views: 57.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-10-22 18:20:22 -0400
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (38.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 155ms (Views: 124.4ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2022-10-22 18:20:24 -0400
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (5.1ms)
+  Rendered blogs/new.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 67ms (Views: 64.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/blogs" for 127.0.0.1 at 2022-10-22 18:20:28 -0400
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRiPx0pDLgRtiPrAPdeN+R15w1FFglAnVntl/JZzuxM/1+8I5NqpaR+C5XD3SABQ513mySPOjoQeEeHylLa4Ug==", "blog"=>{"title"=>"My Abuja Blog", "body"=>"dddd"}, "commit"=>"Create Blog"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:27
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-abuja-blog"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:27
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/blogs_controller.rb:27
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (6.1ms)
+  Rendered blogs/new.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 422 Unprocessable Entity in 114ms (Views: 97.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-10-22 18:21:33 -0400
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (48.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 249ms (Views: 217.2ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-10-22 18:21:40 -0400
+  
+SyntaxError (/home/vin/Documents/Gitly/DevcampPortfolio/app/controllers/portfolios_controller.rb:61: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+...        technology_attributes :[:name]
+...                              ^):
+  
+app/controllers/portfolios_controller.rb:61: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+Started GET "/portfolio" for 127.0.0.1 at 2022-10-22 18:21:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/portfolio"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/portfolios" for 127.0.0.1 at 2022-10-22 18:21:49 -0400
+  
+SyntaxError (/home/vin/Documents/Gitly/DevcampPortfolio/app/controllers/portfolios_controller.rb:61: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+...        technology_attributes :[:name]
+...                              ^):
+  
+app/controllers/portfolios_controller.rb:61: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+Started GET "/portfolios" for 127.0.0.1 at 2022-10-22 18:22:43 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (32.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 129ms (Views: 100.2ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2022-10-22 18:22:51 -0400
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (11.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 162ms (Views: 89.3ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/portfolios" for 127.0.0.1 at 2022-10-22 18:22:58 -0400
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TQum8p+XWeT/BdLeOPyq1sxqqxIhEOl3zFuGRbJYIaJPguWl/SSuo/jQ92SXUQmMRfyIfLhT/ysuM0d6XQIrDw==", "portfolio"=>{"title"=>"My new portfolio", "subtitle"=>"Welcome", "body"=>"gggg", "technologies_attributes"=>{"0"=>{"name"=>""}, "1"=>{"name"=>""}, "2"=>{"name"=>""}}}, "commit"=>"Add new portfolio"}
+Unpermitted parameter: :technologies_attributes
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:15
+  [1m[36mPortfolio Create (82.8ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My new portfolio"], ["subtitle", "Welcome"], ["body", "gggg"], ["main_image", "https://designnotes.blog.gov.uk/wp-content/uploads/sites/53/2020/06/Portfolio-Desk.jpg/600*400"], ["thumb_image", "https://designnotes.blog.gov.uk/wp-content/uploads/sites/53/2020/06/Portfolio-Desk.jpg/250*250"], ["created_at", "2022-10-22 22:22:58.699245"], ["updated_at", "2022-10-22 22:22:58.699245"]]
+  ↳ app/controllers/portfolios_controller.rb:15
+  [1m[35m (53.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:15
+Redirected to http://localhost:5000/portfolios
+Completed 302 Found in 144ms (ActiveRecord: 136.4ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-10-22 18:22:58 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 67ms (Views: 63.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-10-22 18:25:54 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 67ms (Views: 63.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/portfolio/15" for 127.0.0.1 at 2022-10-22 18:25:58 -0400
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:39
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.1ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 15]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 55ms (Views: 49.9ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-22 18:37:20 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gpf7+pnNfz8DkzrDF8dlyYDZokotzCVuCnB/WqemB+9CmaifWYKOufJqatj9/hQ4xnVN099qkBMNAXRiynDIXQ=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 11ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-22 18:37:20 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (86.3ms)
+Completed 200 OK in 154ms (Views: 127.8ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-10-22 18:37:23 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-22 18:37:25 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EYI/epk8+gKTECnSEjUzIygYABVFUGgP4Hy42S9f/R4nk9igRKGYOB//SRpGJqa45FnRQCzXWGCKUsiiarpYZw==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 431ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-22 18:37:26 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (6.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 59ms (Views: 50.1ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2022-10-23 15:03:30 -0400
+  [1m[35m (61.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (49.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (33.9ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (262.8ms)
+Completed 200 OK in 970ms (Views: 697.0ms | ActiveRecord: 133.5ms)
+
+
+Started GET "/login" for ::1 at 2022-10-23 15:03:39 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (189.3ms)
+Completed 200 OK in 296ms (Views: 258.0ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/login" for ::1 at 2022-10-23 15:03:41 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FaKd6buBY+5+YnVSgWUeuSHVq4NbpHIs/DLK//YV8ty4+TL9h8Q84I8m0Dg4j5GwV9+17L3eq7p8LLDl+w9SRQ==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (47.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 664ms (ActiveRecord: 47.6ms)
+
+
+Started GET "/" for ::1 at 2022-10-23 15:03:42 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 61ms (Views: 57.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2022-10-23 16:10:51 -0400
+  
+ActionController::RoutingError (undefined method `before_filter' for ApplicationController:Class
+Did you mean?  before_action):
+  
+app/controllers/concerns/set_source.rb:5:in `block in <module:SetSource>'
+app/controllers/application_controller.rb:4:in `include'
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-10-23 16:11:11 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (87.8ms)
+Completed 200 OK in 157ms (Views: 121.9ms | ActiveRecord: 24.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2022-10-23 16:11:16 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jA0juZn2eAGu8IjQDzH0dJU7b8v/PR0njQvvCq0wnBgHCC/W63Xmyqsi1Vp8jghAI7UPRH6WJ+LLR2WXMrppjA=="}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 48ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2022-10-23 16:11:16 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for ::1 at 2022-10-23 16:11:18 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2022-10-23 16:11:20 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZAjMt/Aa+s1cw4Z/pHRJCUlS/nk1hZ7bFJuW83Lk5bN2obT7mjd5kd9KGNBJExy3A8bfFoKnjNTHh98KiKwnTw==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 419ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2022-10-23 16:11:20 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 67ms (Views: 63.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/portfolios" for ::1 at 2022-10-23 16:11:29 -0400
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (193.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (216.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 453ms (Views: 72.1ms | ActiveRecord: 199.0ms)
+
+
+Started GET "/portfolio/18?q=twitter" for ::1 at 2022-10-23 16:11:36 -0400
+Processing by PortfoliosController#show as HTML
+  Parameters: {"q"=>"twitter", "id"=>"18"}
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:39
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (39.1ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 18]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (403.2ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 479ms (Views: 413.5ms | ActiveRecord: 46.1ms)
+
+
+Started GET "/" for ::1 at 2022-10-23 16:11:47 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (4.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 65ms (Views: 57.3ms | ActiveRecord: 6.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2022-10-23 16:11:49 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RJefh1jK6zi3AnOrfOCgEQkLiGEFPPNOLiyyvUqbDbcwEc7geLrCxXeFWdtBwJbr8+cz62VdYNtfHtHucYfvyw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 16ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2022-10-23 16:11:49 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 108ms (Views: 104.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:22:05 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationController::Super):
+    1: <h1>Hi, <%= current_user.first_name%></h1>
+    2: <p>Find me in app/views/pages/home.html.erb</p>
+    3: 
+    4: <%= @blogs.inspect %>
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__682002558204365188_47354289271960'
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:22:43 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationController::Super):
+    1: <h1>Hi, <%= current_user.first_name%></h1>
+    2: <p>Find me in app/views/pages/home.html.erb</p>
+    3: 
+    4: <%= @blogs.inspect %>
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__682002558204365188_47354280828700'
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:22:47 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationController::Super):
+    1: <h1>Hi, <%= current_user.first_name%></h1>
+    2: <p>Find me in app/views/pages/home.html.erb</p>
+    3: 
+    4: <%= @blogs.inspect %>
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__682002558204365188_70184666706620'
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:23:47 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationController::Super):
+    1: <h1>Hi, <%= current_user.first_name if current_user%></h1>
+    2: <p>Find me in app/views/pages/home.html.erb</p>
+    3: 
+    4: <%= @blogs.inspect %>
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__682002558204365188_47354281445220'
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:24:12 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    1: <h1>Hi, <%= current_user.first_name%></h1>
+    2: <p>Find me in app/views/pages/home.html.erb</p>
+    3: 
+    4: <%= @blogs.inspect %>
+  
+app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__682002558204365188_70184669807040'
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:24:27 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (71.9ms)
+Completed 200 OK in 519ms (Views: 486.6ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-10-23 17:24:35 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 87ms (Views: 61.5ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-23 17:24:37 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZeZ6xgkhe5/9FmYBPHsAZni1Ny/9ffTLmJ9UdF0Ox0ziQhAdfKCM0FtBDjViaaJGIS3KmavRil3OwUEaNuzkyg==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 421ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:24:38 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 80ms (Views: 76.3ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-23 17:24:42 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z4sa+jEd43OTTlzeoprLkvtNU0AWchxzM81ikCld0zENwpYSN+m9A4IX4NMR73vZtMmzu6vqO6IqeHJPVngo1Q=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 13ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:24:42 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:26:17 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (2.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 124ms (Views: 95.6ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-10-23 17:26:19 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 87ms (Views: 56.6ms | ActiveRecord: 9.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-23 17:26:21 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dWy0v4CK6B08AXzGdLsbjsKl9vxerey2GGhVGt27Wi1zBUdvu5g1l8znyaYZXIWeco3ERnZgjW8pEY5GI+1tPg==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 408ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:26:21 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 64ms (Views: 60.3ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-23 17:26:24 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FdrSNR0N9phkKgPMJk84TAV1v/rpwvZrXyWwENWPppqfkZYV7bUjOmW8i3rLqQCokICtQxZH2Abpz8zPcbkh2Q=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 11ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:26:24 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 70ms (Views: 66.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:29:50 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.9ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (84.4ms)
+Completed 200 OK in 155ms (Views: 125.4ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-10-23 17:29:52 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 89ms (Views: 64.2ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-23 17:29:53 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GNcx/0p4T4xoRkeR5q33lxNtnghioDYi3rx83gIQoDm0yjHrOSlWAB9DoilH4a5y2z91JC6FpqdIK8QOTSWuCA==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 409ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:29:54 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 67ms (Views: 64.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-23 17:29:55 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UeXTqfYk31czu94xceOrpQjqDxD1lwduMbH2hYcTTbj5sniIya+nIgnrTamUmdKmmR9cfFGXc7UvulSs9gm/2A=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-23 17:29:55 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 54ms (Views: 50.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-10-23 18:12:46 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 115ms (Views: 85.7ms | ActiveRecord: 11.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-23 18:12:49 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kr3PlcaYleHoxkWeVGVehR02qBQeihJVp7GTI1B1BsFjxt3aq8JpbtlSIkBcL86Ea2zyERzxmV+SmG8htX50Ig==", "user"=>{"email"=>"nnahgodspower124@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "nnahgodspower124@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:5000/
+Completed 302 Found in 409ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-23 18:12:49 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 115ms (Views: 91.3ms | ActiveRecord: 14.0ms)
+
+
