@@ -1,0 +1,67 @@
+
+
+
+class AddSupportedLanguageAndDefaultLanguageToCountries < ActiveRecord::Migration[5.2]
+  def change
+    add_column :countries, :supported_language, :string, array: true, default: []
+    add_column :countries, :default_language, :string, default: nil
+  end
+end
+
+
+
+
+require 'csv'
+
+namespace :import do
+  desc "Import data from csv"
+  task countries: :environment do
+    CSV.foreach(Rails.root.join('lib/updated.csv'), headers: true) do |row|
+      Country.create( {
+        supported_language: row["Language"],
+        default_language: row["Language"],
+        name: row["Country"]
+      } ) 
+      puts "Data added successfully"
+    end
+  end
+end
+
+
+
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_HOST=localhost
+PROPERTY_SERVICE_URI=https://apidev.groupsync.com
+SEARCH_SERVICE_URI=https://apidev.groupsync.com
+IDENTITY_SERVICE_URI=https://apidev.groupsync.com
+PUBLIC_KEY_PATH=~/.ssh/g360_identity_service_rsa.pub.pem
+CLIENT_ID=<id>
+CLIENT_SECRET=<secret>
+DB_DATABASE=market_service_development
+DARK_SKY_KEY=secret_key_text # https://darksky.net/dev/account
+AWS_ACCESS_KEY_ID=your_key
+AWS_SECRET_ACCESS_KEY=your_secret
+AWS_REGION=your_region
+REDIS_URL=redis://localhost:6379
+
+# Uncomment the following if running the service locally
+# RUN_LOCAL=true
+
+
+
+
+gem 'spreadsheet'
+
+ gem 'roo', '~> 2.8' 
+
+
+ 1034 - rubyzip (2.3.2)
+
+ 1132 - rake (~> 13.0.1)
+ 1133 -  roo (~> 2.8)
+
+
+ 986 - roo (2.8.3)
+ 987 -    nokogiri (~> 1)
+ 988 -     rubyzip (>= 1.3.0, < 3.0.0)

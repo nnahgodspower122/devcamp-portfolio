@@ -116,6 +116,8 @@ GEM
     ostruct (0.5.5)
     parser (3.1.2.1)
       ast (~> 2.4.1)
+    petergate (3.0.0)
+      activerecord (> 4.0.0)
     pg (1.4.3)
     popper_js (2.11.6)
     pry (0.13.1)
@@ -233,6 +235,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   ostruct (~> 0.5.5)
+  petergate (~> 3.0)
   pg (>= 0.18, < 2.0)
   pry-byebug
   puma (~> 3.11)
@@ -249,4 +252,4 @@ RUBY VERSION
    ruby 2.6.1p33
 
 BUNDLED WITH
-   2.3.22
+   2.3.25
