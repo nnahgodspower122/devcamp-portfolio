@@ -18027,3 +18027,1325 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.5ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (61.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddLanguageToUsers (20221119212451)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddLanguageToUsers (20221119212451)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (107.1ms)[0m  [1m[35mALTER TABLE "users" ADD "language" character varying[0m
+  ↳ db/migrate/20221119212451_add_language_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221119212451"]]
+  ↳ bin/rails:9
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (23.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2022-11-19 16:30:08 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (16.3ms)
+  Rendered shared/_application_nav.html.erb (1.3ms)
+  Rendered shared/_application_footer.html.erb (0.5ms)
+Completed 200 OK in 2073ms (Views: 1857.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for ::1 at 2022-11-19 16:30:37 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  Rendered shared/_application_nav.html.erb (1.5ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 5762ms (Views: 5759.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2022-11-19 16:30:55 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1599.1ms)
+Completed 500 Internal Server Error in 1644ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    7:   </div>
+    8: 
+  
+app/views/devise/sessions/new.html.erb:5:in `block in _app_views_devise_sessions_new_html_erb___572673820606602394_69928949291580'
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___572673820606602394_69928949291580'
+Started GET "/login" for ::1 at 2022-11-19 16:32:01 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (84.1ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    7:   </div>
+    8: 
+  
+app/views/devise/sessions/new.html.erb:5:in `block in _app_views_devise_sessions_new_html_erb___572673820606602394_69928949256740'
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___572673820606602394_69928949256740'
+Started GET "/login" for ::1 at 2022-11-19 16:32:07 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (102.0ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    7:   </div>
+    8: 
+  
+app/views/devise/sessions/new.html.erb:5:in `block in _app_views_devise_sessions_new_html_erb___572673820606602394_69928949616560'
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___572673820606602394_69928949616560'
+Started GET "/login" for ::1 at 2022-11-19 16:32:38 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (138.3ms)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 9.1ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/es.yml: expects it to return a hash, but does not):
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    7:   </div>
+    8: 
+  
+app/views/devise/sessions/new.html.erb:5:in `block in _app_views_devise_sessions_new_html_erb___572673820606602394_69928857755480'
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___572673820606602394_69928857755480'
+Started GET "/login" for ::1 at 2022-11-19 16:32:41 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (119.8ms)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/es.yml: expects it to return a hash, but does not):
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    7:   </div>
+    8: 
+  
+app/views/devise/sessions/new.html.erb:5:in `block in _app_views_devise_sessions_new_html_erb___572673820606602394_69928819116820'
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___572673820606602394_69928819116820'
+Started GET "/" for ::1 at 2022-11-19 16:33:17 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered shared/_application_nav.html.erb (3.2ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 129ms (Views: 61.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/about-us" for ::1 at 2022-11-19 16:33:19 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.6ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2022-11-19 16:33:20 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.7ms)
+  Rendered shared/_application_nav.html.erb (1.5ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for ::1 at 2022-11-19 16:33:21 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (117.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [3 times] (70.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (245.4ms)
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 122.9ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    1: <tr>
+    2:     <td><p><%= blog.title %></p></td>
+    3:     <td>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago </td>
+    4:     <td><p><%= blog.body %></p></td>
+    5:     <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
+    6:     <td><p><%= link_to 'Show', blog %></p></td>
+  
+app/views/blogs/_blog.html.erb:3:in `_app_views_blogs__blog_html_erb__1236960226767956963_69928948457240'
+app/views/blogs/index.html.erb:17:in `block in _app_views_blogs_index_html_erb__456196070735598125_69928855455860'
+app/views/blogs/index.html.erb:16:in `_app_views_blogs_index_html_erb__456196070735598125_69928855455860'
+Started GET "/contact" for ::1 at 2022-11-19 16:33:28 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+  Rendered shared/_application_nav.html.erb (2.1ms)
+  Rendered shared/_application_footer.html.erb (0.9ms)
+Completed 200 OK in 104ms (Views: 101.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for ::1 at 2022-11-19 16:33:30 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (70.2ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    4:   <%= render "devise/shared/error_messages", resource: resource %>
+    5: 
+    6:   <div class="field">
+    7:     <%= f.label :email %><br />
+    8:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    9:   </div>
+   10: 
+  
+app/views/devise/registrations/new.html.erb:7:in `block in _app_views_devise_registrations_new_html_erb__3997162477767979791_69928849150800'
+app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__3997162477767979791_69928849150800'
+Started GET "/contact" for ::1 at 2022-11-19 16:33:33 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+  Rendered shared/_application_nav.html.erb (1.8ms)
+  Rendered shared/_application_footer.html.erb (0.5ms)
+Completed 200 OK in 73ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolios" for ::1 at 2022-11-19 16:33:34 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolios
+  [1m[36mPortfolio Load (46.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [7 times] (62.7ms)
+  Rendered portfolios/index.html.erb within layouts/portfolios (148.9ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 370ms (Views: 248.0ms | ActiveRecord: 51.7ms)
+
+
+Started GET "/portfolios" for ::1 at 2022-11-19 16:33:35 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolios
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [7 times] (52.2ms)
+  Rendered portfolios/index.html.erb within layouts/portfolios (57.9ms)
+  Rendered shared/_nav.html.erb (0.9ms)
+Completed 200 OK in 104ms (Views: 100.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2022-11-19 16:41:04 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered shared/_application_nav.html.erb (2.8ms)
+  Rendered shared/_application_footer.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-11-19 16:41:04 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered shared/_application_nav.html.erb (1.3ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2022-11-19 16:41:07 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (112.2ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    7:   </div>
+    8: 
+  
+app/views/devise/sessions/new.html.erb:5:in `block in _app_views_devise_sessions_new_html_erb___572673820606602394_69928949666420'
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___572673820606602394_69928949666420'
+Started GET "/login/?land=en" for ::1 at 2022-11-19 16:53:40 -0500
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"land"=>"en"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (103.9ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    7:   </div>
+    8: 
+  
+app/views/devise/sessions/new.html.erb:5:in `block in _app_views_devise_sessions_new_html_erb___572673820606602394_69928860484360'
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___572673820606602394_69928860484360'
+Started GET "/login/?lang=en" for ::1 at 2022-11-19 16:54:12 -0500
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"lang"=>"en"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (84.0ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    7:   </div>
+    8: 
+  
+app/views/devise/sessions/new.html.erb:5:in `block in _app_views_devise_sessions_new_html_erb___572673820606602394_69928856266980'
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___572673820606602394_69928856266980'
+Started GET "/" for ::1 at 2022-11-19 16:54:21 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  Rendered shared/_application_nav.html.erb (3.1ms)
+  Rendered shared/_application_footer.html.erb (1.4ms)
+Completed 200 OK in 67ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?lang=de" for ::1 at 2022-11-19 16:54:29 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"de"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+  Rendered shared/_application_nav.html.erb (2.6ms)
+  Rendered shared/_application_footer.html.erb (1.2ms)
+Completed 200 OK in 64ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-11-24 14:17:29 -0500
+  [1m[35m (61.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (13.6ms)
+  Rendered shared/_application_nav.html.erb (1.3ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 999ms (Views: 686.1ms | ActiveRecord: 62.1ms)
+
+
+Started GET "/about-us" for ::1 at 2022-11-24 14:17:35 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+  Rendered shared/_application_nav.html.erb (2.0ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 135ms (Views: 123.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2022-11-24 14:17:37 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.7ms)
+  Rendered shared/_application_nav.html.erb (3.2ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 93ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for ::1 at 2022-11-24 14:17:38 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (140.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [3 times] (2280.7ms)
+  Rendered blogs/index.html.erb within layouts/blog (2478.4ms)
+Completed 500 Internal Server Error in 2505ms (ActiveRecord: 146.7ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    1: <tr>
+    2:     <td><p><%= blog.title %></p></td>
+    3:     <td>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago </td>
+    4:     <td><p><%= blog.body %></p></td>
+    5:     <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
+    6:     <td><p><%= link_to 'Show', blog %></p></td>
+  
+app/views/blogs/_blog.html.erb:3:in `_app_views_blogs__blog_html_erb__1820476131712661312_70265480474360'
+app/views/blogs/index.html.erb:17:in `block in _app_views_blogs_index_html_erb___3000737558323534481_70265600375640'
+app/views/blogs/index.html.erb:16:in `_app_views_blogs_index_html_erb___3000737558323534481_70265600375640'
+Started GET "/contact" for ::1 at 2022-11-24 14:17:52 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+  Rendered shared/_application_nav.html.erb (2.3ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 69ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolios" for ::1 at 2022-11-24 14:17:54 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolios
+  [1m[36mPortfolio Load (35.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [7 times] (50.5ms)
+  Rendered portfolios/index.html.erb within layouts/portfolios (125.7ms)
+  Rendered shared/_nav.html.erb (1.3ms)
+Completed 200 OK in 305ms (Views: 194.0ms | ActiveRecord: 39.8ms)
+
+
+Started GET "/portfolios" for ::1 at 2022-11-24 14:17:55 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolios
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [7 times] (54.5ms)
+  Rendered portfolios/index.html.erb within layouts/portfolios (59.3ms)
+  Rendered shared/_nav.html.erb (1.5ms)
+Completed 200 OK in 102ms (Views: 97.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contact" for ::1 at 2022-11-24 14:17:57 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+  Rendered shared/_application_nav.html.erb (2.5ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 67ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2022-11-24 14:17:57 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (1.3ms)
+  Rendered shared/_application_nav.html.erb (3.2ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 75ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for ::1 at 2022-11-24 14:17:59 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (167.8ms)
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    4:   <%= render "devise/shared/error_messages", resource: resource %>
+    5: 
+    6:   <div class="field">
+    7:     <%= f.label :email %><br />
+    8:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    9:   </div>
+   10: 
+  
+app/views/devise/registrations/new.html.erb:7:in `block in _app_views_devise_registrations_new_html_erb___4028356991542502393_70265600134660'
+app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___4028356991542502393_70265600134660'
+Started GET "/contact" for ::1 at 2022-11-24 14:18:06 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+  Rendered shared/_application_nav.html.erb (2.6ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 74ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2022-11-24 14:18:08 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (83.7ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    7:   </div>
+    8: 
+  
+app/views/devise/sessions/new.html.erb:5:in `block in _app_views_devise_sessions_new_html_erb__836840454623599640_70265480404240'
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb__836840454623599640_70265480404240'
+Started GET "/contact" for ::1 at 2022-11-24 14:18:19 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.9ms)
+  Rendered shared/_application_nav.html.erb (2.5ms)
+  Rendered shared/_application_footer.html.erb (1.4ms)
+Completed 200 OK in 68ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-11-24 14:18:21 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered shared/_application_nav.html.erb (1.5ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for ::1 at 2022-11-24 14:18:28 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+  Rendered shared/_application_nav.html.erb (1.5ms)
+  Rendered shared/_application_footer.html.erb (1.1ms)
+Completed 200 OK in 67ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2022-11-24 14:18:29 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.8ms)
+  Rendered shared/_application_nav.html.erb (2.1ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 108ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for ::1 at 2022-11-24 14:18:30 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+  Rendered shared/_application_nav.html.erb (1.9ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-11-24 14:18:31 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered shared/_application_nav.html.erb (3.4ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 76ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for ::1 at 2022-11-24 14:18:33 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.8ms)
+  Rendered shared/_application_nav.html.erb (1.9ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 72ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-11-24 14:18:35 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered shared/_application_nav.html.erb (2.3ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 73ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for ::1 at 2022-11-24 14:26:04 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+  Rendered shared/_application_nav.html.erb (2.2ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for ::1 at 2022-11-24 14:27:43 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.8ms)
+  Rendered shared/_application_nav.html.erb (2.3ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 72ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2022-11-24 14:27:49 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.9ms)
+  Rendered shared/_application_nav.html.erb (2.3ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 74ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for ::1 at 2022-11-24 14:27:51 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+  Rendered shared/_application_nav.html.erb (2.2ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 95ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-11-24 14:27:52 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered shared/_application_nav.html.erb (2.3ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-11-24 14:29:06 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  Rendered shared/_application_nav.html.erb (2.3ms)
+  Rendered shared/_application_footer.html.erb (1.0ms)
+Completed 200 OK in 73ms (Views: 69.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-11-24 15:16:32 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered shared/_application_nav.html.erb (2.6ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 68ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for ::1 at 2022-11-24 15:16:39 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [3 times] (72.9ms)
+  Rendered blogs/index.html.erb within layouts/blog (78.3ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    1: <tr>
+    2:     <td><p><%= blog.title %></p></td>
+    3:     <td>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago </td>
+    4:     <td><p><%= blog.body %></p></td>
+    5:     <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
+    6:     <td><p><%= link_to 'Show', blog %></p></td>
+  
+app/views/blogs/_blog.html.erb:3:in `_app_views_blogs__blog_html_erb__1820476131712661312_70265497263900'
+app/views/blogs/index.html.erb:17:in `block in _app_views_blogs_index_html_erb___3000737558323534481_70265497226560'
+app/views/blogs/index.html.erb:16:in `_app_views_blogs_index_html_erb___3000737558323534481_70265497226560'
+Started GET "/" for ::1 at 2022-11-24 15:16:42 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+  Rendered shared/_application_nav.html.erb (2.4ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolios" for ::1 at 2022-11-24 15:16:43 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolios
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [7 times] (56.3ms)
+Started GET "/portfolios" for ::1 at 2022-11-24 15:16:43 -0500
+  Rendered portfolios/index.html.erb within layouts/portfolios (64.5ms)
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolios
+  [1m[36mPortfolio Load (2.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [7 times] (52.1ms)
+  Rendered portfolios/index.html.erb within layouts/portfolios (66.2ms)
+  Rendered shared/_nav.html.erb (0.9ms)
+Completed 200 OK in 209ms (Views: 205.1ms | ActiveRecord: 1.3ms)
+
+
+  Rendered shared/_nav.html.erb (1.3ms)
+Completed 200 OK in 150ms (Views: 115.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/portfolios" for ::1 at 2022-11-24 15:16:43 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolios
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [7 times] (49.1ms)
+  Rendered portfolios/index.html.erb within layouts/portfolios (53.5ms)
+  Rendered shared/_nav.html.erb (1.8ms)
+Completed 200 OK in 96ms (Views: 91.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/about-us" for ::1 at 2022-11-24 15:16:47 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.3ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for ::1 at 2022-11-24 15:16:48 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+  Rendered shared/_application_nav.html.erb (2.2ms)
+  Rendered shared/_application_footer.html.erb (1.5ms)
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2022-11-24 15:16:50 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (105.9ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    7:   </div>
+    8: 
+  
+app/views/devise/sessions/new.html.erb:5:in `block in _app_views_devise_sessions_new_html_erb__836840454623599640_70265568116540'
+app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb__836840454623599640_70265568116540'
+Started GET "/about-us" for ::1 at 2022-11-24 15:16:52 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+  Rendered shared/_application_nav.html.erb (3.1ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for ::1 at 2022-11-24 15:16:53 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (119.6ms)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    4:   <%= render "devise/shared/error_messages", resource: resource %>
+    5: 
+    6:   <div class="field">
+    7:     <%= f.label :email %><br />
+    8:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    9:   </div>
+   10: 
+  
+app/views/devise/registrations/new.html.erb:7:in `block in _app_views_devise_registrations_new_html_erb___4028356991542502393_70265570993540'
+app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___4028356991542502393_70265570993540'
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:16:04 -0500
+  [1m[35m (72.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (13.6ms)
+  Rendered shared/_application_nav.html.erb (1.7ms)
+  Rendered shared/_application_footer.html.erb (0.5ms)
+Completed 200 OK in 1152ms (Views: 868.7ms | ActiveRecord: 72.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:17:24 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1432.9ms)
+Completed 500 Internal Server Error in 1442ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vin/Documents/Gitly/DevcampPortfolio/config/locales/de.yml: expects it to return a hash, but does not):
+    1: <main class="px-3">
+    2:   <h1><%= t('Changing the world through coding') %></h1>
+    3:   <p class="lead">I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products as a freelancer.</p>
+    4:   <p class="lead">
+    5:     <%= link_to "About me", about_us_path, class: "btn btn-lg btn-secondary" %>
+  
+app/views/pages/home.html.erb:2:in `_app_views_pages_home_html_erb___4125794196333481717_70098933061740'
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:20:11 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (150.4ms)
+  Rendered shared/_application_nav.html.erb (3.3ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 302ms (Views: 214.6ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-11-25 15:20:20 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (163.5ms)
+  Rendered shared/_application_nav.html.erb (1.9ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 270ms (Views: 240.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-11-25 15:20:21 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.9ms)
+  Rendered shared/_application_nav.html.erb (2.3ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 87ms (Views: 84.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:21:03 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  Rendered shared/_application_nav.html.erb (1.4ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:22:42 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (98.3ms)
+  Rendered shared/_application_nav.html.erb (2.1ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 268ms (Views: 163.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:23:04 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (100.5ms)
+  Rendered shared/_application_nav.html.erb (1.4ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 227ms (Views: 159.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:23:15 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (77.6ms)
+  Rendered shared/_application_nav.html.erb (1.4ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 207ms (Views: 137.4ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:23:28 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (78.0ms)
+  Rendered shared/_application_nav.html.erb (1.7ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 203ms (Views: 139.5ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:25:11 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (132.8ms)
+  Rendered shared/_application_nav.html.erb (1.6ms)
+  Rendered shared/_application_footer.html.erb (1.2ms)
+Completed 200 OK in 265ms (Views: 192.6ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2022-11-25 15:25:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/en"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/en.yml" for 127.0.0.1 at 2022-11-25 15:25:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/en.yml"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:28:56 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (76.1ms)
+  Rendered shared/_application_nav.html.erb (1.6ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 201ms (Views: 136.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:29:41 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (96.2ms)
+  Rendered shared/_application_nav.html.erb (1.7ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 222ms (Views: 155.1ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:31:08 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (98.8ms)
+  Rendered shared/_application_nav.html.erb (2.1ms)
+  Rendered shared/_application_footer.html.erb (1.4ms)
+Completed 200 OK in 212ms (Views: 148.0ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:32:07 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (94.9ms)
+  Rendered shared/_application_nav.html.erb (3.2ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 213ms (Views: 151.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:32:38 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered shared/_application_nav.html.erb (3.0ms)
+  Rendered shared/_application_footer.html.erb (1.1ms)
+Completed 200 OK in 69ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:32:41 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  Rendered shared/_application_nav.html.erb (2.6ms)
+  Rendered shared/_application_footer.html.erb (1.0ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:32:42 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered shared/_application_nav.html.erb (2.3ms)
+  Rendered shared/_application_footer.html.erb (1.5ms)
+Completed 200 OK in 67ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:33:34 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered shared/_application_nav.html.erb (2.8ms)
+  Rendered shared/_application_footer.html.erb (1.3ms)
+Completed 200 OK in 104ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:33:48 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered shared/_application_nav.html.erb (2.7ms)
+  Rendered shared/_application_footer.html.erb (1.2ms)
+Completed 200 OK in 61ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?lang=de" for 127.0.0.1 at 2022-11-25 15:35:44 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"de"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered shared/_application_nav.html.erb (3.2ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?lang=de" for 127.0.0.1 at 2022-11-25 15:36:46 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"de"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered shared/_application_nav.html.erb (3.6ms)
+  Rendered shared/_application_footer.html.erb (0.9ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?lang=de" for 127.0.0.1 at 2022-11-25 15:37:44 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"de"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (102.9ms)
+  Rendered shared/_application_nav.html.erb (2.6ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 231ms (Views: 165.3ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/?lang=de" for 127.0.0.1 at 2022-11-25 15:37:46 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"de"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  Rendered shared/_application_nav.html.erb (2.4ms)
+  Rendered shared/_application_footer.html.erb (1.4ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?lang=de" for 127.0.0.1 at 2022-11-25 15:37:47 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"de"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered shared/_application_nav.html.erb (2.2ms)
+  Rendered shared/_application_footer.html.erb (0.9ms)
+Completed 200 OK in 91ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?lang=en" for 127.0.0.1 at 2022-11-25 15:37:54 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"en"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  Rendered shared/_application_nav.html.erb (2.7ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 70ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?lang=en" for 127.0.0.1 at 2022-11-25 15:37:56 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"en"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+  Rendered shared/_application_nav.html.erb (2.5ms)
+  Rendered shared/_application_footer.html.erb (1.0ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for 127.0.0.1 at 2022-11-25 15:38:11 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+  Rendered shared/_application_nav.html.erb (2.5ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 80ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us/?lang=de" for 127.0.0.1 at 2022-11-25 15:38:22 -0500
+Processing by PagesController#about as HTML
+  Parameters: {"lang"=>"de"}
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.0ms)
+  Rendered shared/_application_nav.html.erb (2.9ms)
+  Rendered shared/_application_footer.html.erb (1.9ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?lang=en" for 127.0.0.1 at 2022-11-25 15:39:19 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"en"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  Rendered shared/_application_nav.html.erb (4.1ms)
+  Rendered shared/_application_footer.html.erb (0.5ms)
+Completed 200 OK in 92ms (Views: 89.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?lang=en" for 127.0.0.1 at 2022-11-25 15:39:56 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"en"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  Rendered shared/_application_nav.html.erb (2.2ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?lang=en" for 127.0.0.1 at 2022-11-25 15:40:01 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"en"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  Rendered shared/_application_nav.html.erb (1.9ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 76ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?lang=en" for 127.0.0.1 at 2022-11-25 15:40:51 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"en"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.1ms)
+  Rendered shared/_application_nav.html.erb (2.6ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 74ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?lang=de" for 127.0.0.1 at 2022-11-25 15:42:14 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"lang"=>"de"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered shared/_application_nav.html.erb (3.3ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 60ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?language=de" for 127.0.0.1 at 2022-11-25 15:43:03 -0500
+Processing by PagesController#home as HTML
+  Parameters: {"language"=>"de"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  Rendered shared/_application_nav.html.erb (1.4ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 92ms (Views: 88.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 15:43:46 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  Rendered shared/_application_nav.html.erb (3.0ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 60ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-11-25 16:11:26 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.7ms)
+  Rendered shared/_application_nav.html.erb (2.6ms)
+  Rendered shared/_application_footer.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-11-25 16:12:32 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (1.1ms)
+  Rendered shared/_application_nav.html.erb (1.7ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 71ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-11-25 16:13:03 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.7ms)
+  Rendered shared/_application_nav.html.erb (2.6ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 101ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-26 11:12:25 -0500
+  [1m[35m (94.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vin/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1883.4ms)
+Started GET "/" for 127.0.0.1 at 2022-11-26 11:12:30 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.7ms)
+  Rendered shared/_application_nav.html.erb (1.5ms)
+  Rendered shared/_application_nav.html.erb (3.1ms)
+  Rendered shared/_application_footer.html.erb (0.5ms)
+  Rendered shared/_application_footer.html.erb (0.5ms)
+Completed 200 OK in 3382ms (Views: 2996.4ms | ActiveRecord: 103.2ms)
+
+
+Completed 200 OK in 650ms (Views: 643.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-26 11:12:48 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+  Rendered shared/_application_nav.html.erb (3.0ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-26 11:14:12 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  Rendered shared/_application_nav.html.erb (2.2ms)
+  Rendered shared/_application_footer.html.erb (1.0ms)
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for 127.0.0.1 at 2022-11-26 11:14:14 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+  Rendered shared/_application_nav.html.erb (2.3ms)
+  Rendered shared/_application_footer.html.erb (1.4ms)
+Completed 200 OK in 74ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-11-26 11:14:15 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (2.0ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-11-26 11:14:16 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (95.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [3 times] (4.5ms)
+  Rendered collection of blogs/_blog.html.erb [3 times] (6.2ms)
+  Rendered collection of blogs/_blog.html.erb [3 times] (5.7ms)
+  Rendered blogs/index.html.erb within layouts/blog (226.9ms)
+  Rendered shared/_nav.html.erb (1.6ms)
+Completed 200 OK in 369ms (Views: 256.1ms | ActiveRecord: 101.6ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-11-26 11:14:16 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [3 times] (5.1ms)
+  Rendered collection of blogs/_blog.html.erb [3 times] (8.2ms)
+  Rendered collection of blogs/_blog.html.erb [3 times] (4.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (25.8ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 77ms (Views: 72.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-26 11:14:20 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered shared/_application_nav.html.erb (1.4ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-26 11:14:20 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+  Rendered shared/_application_nav.html.erb (1.4ms)
+  Rendered shared/_application_footer.html.erb (0.4ms)
+Completed 200 OK in 64ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-11-26 11:14:22 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.5ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (328.3ms)
+  Rendered shared/_application_nav.html.erb (2.3ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 472ms (Views: 454.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-26 11:15:21 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered shared/_application_nav.html.erb (1.5ms)
+  Rendered shared/_application_footer.html.erb (0.8ms)
+Completed 200 OK in 54ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+

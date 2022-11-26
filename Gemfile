@@ -61,8 +61,11 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 
 gem 'ostruct', '~> 0.5.5'
 
-gem 'i18n-tasks', '~> 0.9.30'
+
 
 gem 'bootstrap', '~> 5.2.2'
 
 gem 'petergate', '~> 3.0'
+
+gem 'rails-i18n'
+
